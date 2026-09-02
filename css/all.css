@@ -107,3 +107,54 @@ section {
   overflow: hidden;
   width: 100%;
 }
+
+
+
+
+header{
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 20px 0 0 0;
+}
+header .layout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .layout .logo{}
+header .layout .logo a{}
+header .layout .logo a img{}
+header .layout .logo h1{}
+header .layout nav{}
+header .layout nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+header .layout nav ul li{}
+header .layout  .tel_button{
+  display: flex;
+  gap: 50px;
+}
+header .layout .el_button .tel a{}
+
+@media (max-width: 767px) {
+  header{
+  height: 200px;
+}
+  header .layout{
+    max-width: 350px;
+  flex-direction: column;
+  gap: 15px;
+}
+header .layout nav ul{
+  gap: 10px;
+}
+header .layout  .tel_button{
+  flex-direction: column;
+  gap: 10px;
+}
+}
+
+
+
