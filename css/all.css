@@ -113,8 +113,8 @@ section {
 
 header{
   width: 100%;
-  margin: 0 0 20px 0;
-  padding: 20px 0 0 0;
+  height: 80px;
+  margin: 20px 0 0 0;
 }
 header .layout{
   display: flex;
@@ -124,7 +124,9 @@ header .layout{
 header .layout .logo{}
 header .layout .logo a{}
 header .layout .logo a img{}
-header .layout .logo h1{}
+header .layout .logo h1{
+  text-indent: -9999px;
+}
 header .layout nav{}
 header .layout nav ul{
   display: flex;
@@ -154,6 +156,18 @@ header .layout  .tel_button{
   flex-direction: column;
   gap: 10px;
 }
+}
+
+
+main .first-view{
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+main .first-view .baner{
+  position: absolute;
+}
+main .first-view .text{
+  position: relative;
 }
 
 
