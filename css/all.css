@@ -113,17 +113,22 @@ section {
 
 header{
   width: 100%;
-  height: 80px;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
 }
 header .layout{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .layout .logo{}
+header .layout .logo{
+  width: 140px;
+  height: 70px;
+}
 header .layout .logo a{}
-header .layout .logo a img{}
+header .layout .logo a img{
+  width: 100%;
+  height: 100%;
+}
 header .layout .logo h1{
   text-indent: -9999px;
 }
@@ -133,12 +138,22 @@ header .layout nav ul{
   flex-wrap: wrap;
   gap: 30px;
 }
-header .layout nav ul li{}
+header .layout nav ul li a,
+header .layout  .tel_button a{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+  font-size: 18px;
+  font-weight: 500;
+}
+header .layout nav ul li a:hover,
+header .layout  .tel_button a:hover{
+  text-decoration: underline;
+  color: #333399;
+}
 header .layout  .tel_button{
   display: flex;
   gap: 50px;
 }
-header .layout .el_button .tel a{}
 
 @media (max-width: 767px) {
   header{
@@ -159,15 +174,62 @@ header .layout  .tel_button{
 }
 
 
-main .first-view{
-  width: 100%;
-  height: calc(100vh - 80px);
+main .first-view{}
+main .first-view .layout .baner{
+  width: 960px;
+  height: 300px;
+  
 }
-main .first-view .baner{
+main .first-view  .layout .baner img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: .3;
   position: absolute;
 }
-main .first-view .text{
+main .first-view .layout .text{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
   position: relative;
+  bottom: 200px;
+}
+main .first-view .layout .text h2,
+main .first-view .layout .text h3,
+main .first-view .layout .text .btn a{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+}
+main .first-view .layout .text h2{
+  font-size: 36px;
+  font-weight: 700;
+}
+main .first-view .layout .text h3{
+   font-size: 26px;
+   font-weight: 600;
+   width: 800px;
+   text-align: center;
+}
+main .first-view .layout .text .btn{
+  display: flex;
+  gap: 100px;
+}
+main .first-view .layout .text .btn a{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  width: 300px;
+  height: 50px;
+  background-color: #DAEAFF;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 8px;
+  transition: .3s;
+}
+main .first-view .layout .text .btn a:hover{
+  box-shadow: 0 10px 8px rgba(9, 24, 245, 0.2);
+  transform: translateY(-8px);
 }
 
 
