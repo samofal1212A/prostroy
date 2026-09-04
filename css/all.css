@@ -164,6 +164,10 @@ header .layout  .tel_button{
   flex-direction: column;
   gap: 15px;
 }
+header .layout .logo{
+  width: 120px;
+  height: 60px;
+}
 header .layout nav ul{
   gap: 10px;
 }
@@ -178,7 +182,6 @@ main .first-view{}
 main .first-view .layout .baner{
   width: 960px;
   height: 300px;
-  
 }
 main .first-view  .layout .baner img{
   width: 100%;
@@ -230,6 +233,124 @@ main .first-view .layout .text .btn a{
 main .first-view .layout .text .btn a:hover{
   box-shadow: 0 10px 8px rgba(9, 24, 245, 0.2);
   transform: translateY(-8px);
+}
+
+@media (max-width: 767px){
+main .first-view .layout{
+  max-width: 350px;
+  width: 100%;
+}
+main .first-view .layout .baner{
+  height: 200px;
+}
+main .first-view .layout .text{
+  gap: 50px;
+  bottom: 100px;
+}
+main .first-view .layout .text h2{
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+main .first-view .layout .text h3{
+   font-size: 20px;
+   width: 100%;
+}
+main .first-view .layout .text .btn{
+  flex-direction: column;
+  gap: 20px;
+}
+main .first-view .layout .text .btn a{
+  font-size: 18px;
+}
+
+}
+
+
+
+main .catalog{
+  padding: 50px 0 50px 0;
+}
+main .catalog .layout{
+  width: 100%;
+}
+main .catalog .layout h2,
+main .catalog .layout h3,
+main .catalog .layout .catalog_box .catalog_card h4,
+main .catalog .layout .catalog_box .catalog_card p,
+main .catalog .layout .catalog_box .catalog_card span,
+main .catalog .layout .catalog_box .catalog_card a{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+  text-align: center;
+}
+main .catalog .layout h2{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+main .catalog .layout h3{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 50px 0;
+}
+main .catalog .layout .catalog_box{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+main .catalog .layout .catalog_box .catalog_card{
+  max-width: 300px;
+  width: 100%;
+  background-color: rgba(240, 220, 130, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 10px 15px 10px;
+}
+main .catalog .layout .catalog_box .catalog_card h4{
+  font-size: 18px;
+  font-weight: 600;
+}
+main .catalog .layout .catalog_box .catalog_card p,
+main .catalog .layout .catalog_box .catalog_card a{
+  font-size: 16px;
+  font-weight: 400;
+}
+main .catalog .layout .catalog_box .catalog_card span{
+  font-size: 16px;
+  font-weight: 600;
+}
+main .catalog .layout .catalog_box .catalog_card a{
+  width: 150px;
+  height: 30px;
+  background-color: #DAEAFF;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 10px 0 0 0;
+  transition: .3s;
+}
+main .catalog .layout .catalog_box .catalog_card a:hover{
+  box-shadow: 0 10px 8px rgba(9, 24, 245, 0.2);
+  transform: translateY(-8px);
+}
+
+@media (max-width: 767px){
+  main .catalog .layout h2{
+  font-size: 28px;
+  margin: 0 0 20px 0;
+}
+main .catalog .layout h3{
+  font-size: 18px;
+  margin: 0 0 40px 0;
+}
+main .catalog .layout .catalog_box{
+  grid-template-columns: 1fr;
+  gap: 15px;
+  justify-items: center;
+}
 }
 
 
