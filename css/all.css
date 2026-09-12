@@ -399,7 +399,7 @@ main .advantages .advantages_container .advantages_block{
   align-items: start;
   max-width: 280px;
   width: 100%;
-  padding: 10px 10px 10px 10px;;
+  padding: 10px;
   box-shadow: 0 0 10px rgba(9, 24, 245, 0.2);
   border-radius: 0 10px 0 10px;
   margin: 0 0 10px 0;
@@ -442,6 +442,15 @@ main .advantages .advantages_container{
   grid-template-columns: 1fr;
   gap: 15px;
 }
+}
+
+
+main .how_it_works h2,
+main .how_it_works h3,
+main .how_it_works p{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+  text-align: center;
 }
 
 
