@@ -475,8 +475,7 @@ main .how_it_works .how_it_works_container .how_it_works_block{
   margin: 0 0 15px 0;
   max-width: 200px;
   width: 100%;
-  max-height: 250px;
-  height: 100%;
+  min-height: 180px;
   position: relative;
 }
 main .how_it_works .how_it_works_container .how_it_works_block::before{
@@ -516,7 +515,6 @@ main .how_it_works .how_it_works_container .how_it_works_block p{
 }
 main .how_it_works .how_it_works_container .how_it_works_block{
   max-width: 400px;
-  max-height: 180px;
 }
 main .how_it_works .how_it_works_container .how_it_works_block::before{
   left: 120%;
@@ -538,13 +536,37 @@ main .how_it_works .how_it_works_container{
 }
 main .how_it_works .how_it_works_container .how_it_works_block{
   max-width: 300px;
-  height: 200px;
 }
 main .how_it_works .how_it_works_container .how_it_works_block::before{
   transform: rotate(90deg);
   top: 110%;
   left: 45%;
 }
+}
+
+
+main .about_the_company{
+  padding: 40px 0 40px 0;
+}
+main .about_the_company h2,
+main .about_the_company h3,
+main .about_the_company p{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+}
+main .about_the_company h2{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 50px 0;
+}
+main .about_the_company .about_title span{
+  font-size: 26px;
+  font-weight: 600;
+}
+main .about_the_company .about_title p{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 40px 0;
 }
 
 
