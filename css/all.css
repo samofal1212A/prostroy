@@ -302,7 +302,7 @@ main .catalog .layout .catalog_box{
 main .catalog .layout .catalog_box .catalog_card{
   max-width: 300px;
   width: 100%;
-  background-color: rgba(240, 220, 130, 0.5);
+  background-color: rgba(255, 255, 0, 0.3);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -445,6 +445,9 @@ main .advantages .advantages_container{
 }
 
 
+main .how_it_works{
+  padding: 40px 0 40px 0;
+}
 main .how_it_works h2,
 main .how_it_works h3,
 main .how_it_works p{
@@ -452,6 +455,96 @@ main .how_it_works p{
   color: #301e67;
   text-align: center;
 }
+main .how_it_works h2{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 50px 0;
+}
+main .how_it_works .how_it_works_container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-items: center;
+}
+main .how_it_works .how_it_works_container .how_it_works_block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+  border-radius: 30px;
+  padding: 20px 20px 0 20px;
+  margin: 0 0 15px 0;
+  max-width: 200px;
+  width: 100%;
+  max-height: 250px;
+  height: 100%;
+  position: relative;
+}
+main .how_it_works .how_it_works_container .how_it_works_block::before{
+  content: "\27AF";
+  font-size: 30px;
+  position: absolute;
+  left: 130%;
+  top: 40%;
+  color: #301e67;
+}
+main .how_it_works .how_it_works_container .how_it_works_block:last-child::before{
+  content: "";
+}
+main .how_it_works .how_it_works_container .how_it_works_block h3{
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  text-decoration: underline;
+  text-decoration-color: #FFCC00;
+}
+main .how_it_works .how_it_works_container .how_it_works_block h3 span{
+  padding: 0 10px 0 0;
+  text-decoration: none;
+  font-size: 24px;
+}
+main .how_it_works .how_it_works_container .how_it_works_block p{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 40px 0;
+}
 
+@media (max-width: 1279px){
+  main .how_it_works .how_it_works_container{
+  grid-template-columns: repeat(2,2fr);
+  gap: 25px;
+  margin: 0 0 15px 0;
+}
+main .how_it_works .how_it_works_container .how_it_works_block{
+  max-width: 400px;
+  max-height: 180px;
+}
+main .how_it_works .how_it_works_container .how_it_works_block::before{
+  left: 120%;
+}
+}
+
+@media (max-width: 767px){
+    main .how_it_works h2{
+  font-size: 28px;
+  margin: 0 0 40px 0;
+}
+main .how_it_works h3{
+  font-size: 18px;
+  margin: 0 0 40px 0;
+}
+main .how_it_works .how_it_works_container{
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+main .how_it_works .how_it_works_container .how_it_works_block{
+  max-width: 300px;
+  height: 200px;
+}
+main .how_it_works .how_it_works_container .how_it_works_block::before{
+  transform: rotate(90deg);
+  top: 110%;
+  left: 45%;
+}
+}
 
 
