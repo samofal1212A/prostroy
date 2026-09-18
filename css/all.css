@@ -548,25 +548,78 @@ main .how_it_works .how_it_works_container .how_it_works_block::before{
 main .about_the_company{
   padding: 40px 0 40px 0;
 }
+main .about_the_company .about_container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+  grid-template-areas: "text image";
+}
+main .about_the_company .about_container .about_img{
+  width: 400px;
+  height: 500px;
+}
+main .about_the_company .about_container .about_img img{
+  grid-area: image;
+  border-radius: 10px;
+}
 main .about_the_company h2,
 main .about_the_company h3,
 main .about_the_company p{
   font-family: 'Courier New', Courier, monospace;
   color: #301e67;
 }
+main .about_the_company .about_container .about_title{
+  grid-area: text;
+}
 main .about_the_company h2{
   font-size: 30px;
   font-weight: 600;
   margin: 0 0 50px 0;
 }
-main .about_the_company .about_title span{
+main .about_the_company .about_container .about_title p{
+  font-size: 20px;
+  font-weight: 500; 
+  margin: 0 0 60px 0;
+}
+main .about_the_company .about_container .about_title .title_container{
+  display: grid;
+  grid-template-columns: repeat(2,2fr);
+  justify-items: center;
+  gap: 30px;
+}
+main .about_the_company .about_container .about_title .title_container p{ 
+  font-size: 16px;
+  text-align: center;
+}
+main .about_the_company .about_container .about_title .title_container span{
+  display: block;
   font-size: 26px;
   font-weight: 600;
 }
-main .about_the_company .about_title p{
-  font-size: 20px;
-  font-weight: 500;
+
+@media (max-width: 767px){
+  main .about_the_company .about_container{
+  display: block;
+}
+main .about_the_company .about_container .about_img{
+  width: 250px;
+  height: 350px;
+}
+main .about_the_company .about_container .about_title{
+  max-width: 300px;
+  width: 100%;
+}
+main .about_the_company h2{
+  font-size: 28px;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+main .about_the_company .about_container .about_title p{
+  font-size: 18px;
+  font-weight: 500; 
   margin: 0 0 40px 0;
+  text-align: center;
+}
 }
 
 
