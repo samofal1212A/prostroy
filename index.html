@@ -126,7 +126,7 @@
 								</div>
 								<div class="how_it_works_block">
 									<h3><span>02</span>Розрахунок</h3>
-									<p>Ми уточнюємо параметри об'єкта та розраховуємо необхідну кількіть риштування</p>
+									<p>Ми уточнюємо параметри об'єкта та розраховуємо необхідну кількість риштування</p>
 								</div>
 								<div class="how_it_works_block">
 									<h3><span>03</span>Доставка</h3>
@@ -158,9 +158,43 @@
 						</div>
 					</div>
 				</section>
-				<section class="">
+				<section class="cost_calc">
 					<div class="layout">
-							
+						<div class="calc_container">
+							<div class="calc_text">
+								<h2>Розрахуємо вартість риштування</h2>
+								<p>Залиште заявку — уточнимо параметри об'єкта та підберемо оптимальний варіант.</p>
+							</div>
+							<div class="calc_form">
+								<form action="#" method="POST">
+									<label for="name">Ваше ім'я</label>
+									<input type="text" id="name" name="name" required>
+									<label for="tel">Ваш номер телефону</label>
+									<input type="tel" id="tel" name="tel" required>
+									<label for="scaffolding">Оберіть тип риштування</label>
+									<select id="scaffolding" name="scaffolding">
+										<option value="" selected disabled></option>
+										<option value="Рамне">Рамне</option>
+										<option value="Клинове">Клинове</option>
+										<option value="Хомутове">Хомутове</option>
+										<option value="Вишки-тури">Вишки-тури</option>
+										<option value="Не знаю — потрібна консультація">Не знаю — потрібна консультація</option>
+									</select>
+									<label for="terms">Оберіть термін оренди</label>
+									<select id="terms" name="terms">
+										<option value="" selected disabled></option>
+										<option value="До 7 днів">До 7 днів</option>
+										<option value="1–4 тижні">1–4 тижні</option>
+										<option value="1–3 місяці">1–3 місяці</option>
+										<option value="Більше 3 місяців">Більше 3 місяців</option>
+										<option value="Поки не визначився">Поки не визначився</option>
+									</select>
+										<label for="comment">Напишіть коментар до замовлення</label>
+										<textarea id="comment" name="comment" placeholder="Опишіть об'єкт або залиште додаткову інформацію"></textarea>
+										<button type="submit">Отримати розрахунок</button>
+								</form>
+							</div>
+						</div>
 					</div>
 				</section>
 				<section class="">

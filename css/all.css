@@ -606,6 +606,7 @@ main .about_the_company .about_container .about_title .title_container span{
 main .about_the_company .about_container .about_img{
   width: 250px;
   height: 350px;
+  margin: 0 0 15px 0;
 }
 main .about_the_company .about_container .about_title{
   max-width: 300px;
@@ -621,6 +622,126 @@ main .about_the_company .about_container .about_title p{
   font-weight: 500; 
   margin: 0 0 40px 0;
   text-align: center;
+}
+}
+
+
+main .cost_calc{
+  margin: 30px 0 30px 0;
+}
+main .cost_calc .calc_container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+  gap: 30px;
+}
+main .cost_calc .calc_container .calc_text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 400px;
+}
+main .cost_calc .calc_container .calc_text h2,
+main .cost_calc .calc_container .calc_text p,
+main .cost_calc .calc_container .calc_form form label,
+main .cost_calc .calc_container .calc_form form input,
+main .cost_calc .calc_container .calc_form select:optional,
+main .cost_calc .calc_container .calc_form form textarea,
+main .cost_calc .calc_container .calc_form form button{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+}
+main .cost_calc .calc_container .calc_text h2{
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+main .cost_calc .calc_container .calc_text p{
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+main .cost_calc .calc_container .calc_form{
+  padding: 0 30px 0 30px;
+}
+main .cost_calc .calc_container .calc_form form{
+  display: grid;
+  grid-template-columns: repeat(2,6fr);
+  gap: 10px;
+}
+main .cost_calc .calc_container .calc_form form label{
+  font-size: 18px;
+  font-weight: 500;
+}
+main .cost_calc .calc_container .calc_form input,
+main .cost_calc .calc_container .calc_form select,
+main .cost_calc .calc_container .calc_form textarea{
+  font-size: 16px;
+  font-weight: 400;
+  padding: 3px;
+  border: 1px solid #301e67;
+  border-radius: 8px;
+}
+main .cost_calc .calc_container .calc_form select{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 18px;
+}
+main .cost_calc .calc_container .calc_form textarea{
+  padding: 5px;
+}
+main .cost_calc .calc_container .calc_form textarea:placeholder-shown{
+  font-size: 14px;
+  font-weight: 400;
+}
+main .cost_calc .calc_container .calc_form button{
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  width: 300px;
+  height: 35px;
+  background-color: #DAEAFF;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #DAEAFF;
+  border-radius: 8px;
+  margin: 50px 0 0 0;
+  transition: .3s;
+}
+main .cost_calc .calc_container .calc_form button:hover{
+  box-shadow: 0 10px 8px rgba(9, 24, 245, 0.2);
+  transform: translateY(-8px);
+}
+
+@media (max-width: 767px){
+main .cost_calc .calc_container{
+  grid-template-columns: 1fr;
+}
+  main .cost_calc .calc_container .calc_text h2{
+  font-size: 28px;
+  text-align: center;
+}
+main .cost_calc .calc_container .calc_text p{
+  font-size: 18px;
+  font-weight: 500; 
+  margin: 0 0 20px 0;
+}
+main .cost_calc .calc_container .calc_form form{
+  grid-template-columns: 1fr;
+}
+main .cost_calc .calc_container .calc_form button{
+  margin: 0 0 0 0;
+}
+main .cost_calc .calc_container .calc_form form label{
+  font-size: 16px;
+}
+main .cost_calc .calc_container .calc_form input,
+main .cost_calc .calc_container .calc_form select,
+main .cost_calc .calc_container .calc_form textarea{
+  font-size: 14px;
+    margin: 0 0 20px 0;
 }
 }
 
