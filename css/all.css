@@ -639,9 +639,9 @@ main .cost_calc .calc_container .calc_text{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 30px;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
 }
 main .cost_calc .calc_container .calc_text h2,
 main .cost_calc .calc_container .calc_text p,
@@ -665,6 +665,7 @@ main .cost_calc .calc_container .calc_text p{
 }
 main .cost_calc .calc_container .calc_form{
   padding: 0 30px 0 30px;
+  margin: 0 0 10px 0;
 }
 main .cost_calc .calc_container .calc_form form{
   display: grid;
@@ -718,6 +719,7 @@ main .cost_calc .calc_container .calc_form button:hover{
 @media (max-width: 767px){
 main .cost_calc .calc_container{
   grid-template-columns: 1fr;
+  justify-items: center;
 }
   main .cost_calc .calc_container .calc_text h2{
   font-size: 28px;
@@ -741,8 +743,115 @@ main .cost_calc .calc_container .calc_form input,
 main .cost_calc .calc_container .calc_form select,
 main .cost_calc .calc_container .calc_form textarea{
   font-size: 14px;
-    margin: 0 0 20px 0;
+  margin: 0 0 20px 0;
 }
 }
+
+
+main .contacts{
+  margin: 60px 0 40px 0;
+}
+main .contacts .contacts_container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+}
+main .contacts .contacts_container .contacts_title{
+  margin: 50px 0 0 0;
+}
+main .contacts .contacts_container .contacts_title h2,
+main .contacts .contacts_container .contacts_title p,
+main .contacts .contacts_container .contacts_title a,
+main .contacts .contacts_container .contacts_title time{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+}
+main .contacts .contacts_container .contacts_title h2{
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+main .contacts .contacts_container .contacts_title p{
+  font-size: 20px;
+  font-weight: 500; 
+  text-decoration: underline #FFCC00;
+}
+main .contacts .contacts_container .contacts_title a,
+main .contacts .contacts_container .contacts_title time{
+  display: inline-block;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+main .contacts .contacts_container .contacts_title a:hover{
+  text-decoration: underline;
+  color: #333399;
+}
+main .contacts .contacts_container .contacts_img{
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  gap: 20px;
+}
+main .contacts .contacts_container .contacts_img .img_block{
+  width: 400px;
+  height: 300px;
+}
+main .contacts .contacts_container .contacts_img .img_block img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .contacts .contacts_container .contacts_img .img_block img.img_1{
+  border-radius: 30px 0 0 30px;
+}
+main .contacts .contacts_container .contacts_img .img_block img.img_2{
+  border-radius: 0 30px 30px 0;
+}
+main .contacts .contacts_container .contacts_img .img_block img.img_3{
+  border-radius: 30px 30px 0 0;
+}
+
+@media (max-width: 767px){
+main .contacts .contacts_container{
+  grid-template-columns: 1fr;  
+  justify-items: center;
+}
+main .contacts .contacts_container .contacts_title h2{
+  font-size: 28px;
+  text-align: center;
+}
+main .contacts .contacts_container .contacts_title p{
+  font-size: 18px;
+  font-weight: 500; 
+  margin: 0 0 20px 0;
+}
+main .contacts .contacts_container .contacts_title a,
+main .contacts .contacts_container .contacts_title time{
+    font-size: 16px;
+}
+main .contacts .contacts_container .contacts_title{
+  margin: 50px 0 30px 0;
+}
+main .contacts .contacts_container .contacts_img{
+  flex-direction: column;
+  align-items: center;
+}
+main .contacts .contacts_container .contacts_img .img_block{
+  width: 300px;
+  height: 220px;
+}
+main .contacts .contacts_container .contacts_img .img_block img.img_1,
+main .contacts .contacts_container .contacts_img .img_block img.img_2,
+main .contacts .contacts_container .contacts_img .img_block img.img_3{
+  border-radius: 30px;
+}
+}
+
+
 
 
