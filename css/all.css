@@ -751,6 +751,9 @@ main .cost_calc .calc_container .calc_form textarea{
 main .contacts{
   margin: 60px 0 40px 0;
 }
+main .contacts .layout{
+  width: 100%;
+}
 main .contacts .contacts_container{
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -776,6 +779,7 @@ main .contacts .contacts_container .contacts_title p{
   font-size: 20px;
   font-weight: 500; 
   text-decoration: underline #FFCC00;
+  margin: 0 0 10px 0;
 }
 main .contacts .contacts_container .contacts_title a,
 main .contacts .contacts_container .contacts_title time{
@@ -790,8 +794,7 @@ main .contacts .contacts_container .contacts_title a:hover{
   color: #333399;
 }
 main .contacts .contacts_container .contacts_img{
-  max-width: 900px;
-  width: 100%;
+  width: 900px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap-reverse;
@@ -817,6 +820,9 @@ main .contacts .contacts_container .contacts_img .img_block img.img_3{
 }
 
 @media (max-width: 767px){
+  main .contacts .layout{
+  width: 96%;
+}
 main .contacts .contacts_container{
   grid-template-columns: 1fr;  
   justify-items: center;
@@ -840,6 +846,7 @@ main .contacts .contacts_container .contacts_title{
 main .contacts .contacts_container .contacts_img{
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 main .contacts .contacts_container .contacts_img .img_block{
   width: 300px;
