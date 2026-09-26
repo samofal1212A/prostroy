@@ -113,45 +113,65 @@ section {
 
 header{
   width: 100%;
+  height: 72px;
   margin: 20px 0 20px 0;
 }
-header .layout{
+header .layout .header_container{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .layout .logo{
+header .layout .header_container .logo{
   width: 140px;
   height: 70px;
 }
-header .layout .logo a{}
-header .layout .logo a img{
+header .layout .header_container .logo a{}
+header .layout .header_container .logo a img{
   width: 100%;
   height: 100%;
 }
-header .layout .logo h1{
+header .layout .header_container .logo h1{
   text-indent: -9999px;
 }
-header .layout nav{}
-header .layout nav ul{
+header .layout .header_container nav{}
+header .layout .header_container nav ul{
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-header .layout nav ul li a,
-header .layout  .tel_button a{
-  font-family: 'Courier New', Courier, monospace;
+header .layout .header_container nav ul li a,
+header .layout .header_container  .tel_button a{
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
 }
-header .layout nav ul li a:hover,
-header .layout  .tel_button a:hover{
+header .layout .header_container .tel_button .nav_btn{
+  width: 250px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #f7c500;
+  line-height: 40px;
+  text-align: center;
+  transition: 0.3s;
+  color: #1f1f1f;
+}
+header .layout .header_container  .tel_button a{
+  font-weight: 600;
+}
+header .layout .header_container nav ul li a:hover,
+header .layout .header_container  .tel_button a:hover{
   text-decoration: underline;
   color: #333399;
 }
-header .layout  .tel_button{
+header .layout .header_container .tel_button .nav_btn:hover{
+  box-shadow: 0 10px 8px rgba(9, 24, 245, 0.2);
+  transform: translateY(-8px);
+  text-decoration: none;
+}
+header .layout .header_container  .tel_button{
   display: flex;
+  align-items: center;
   gap: 50px;
 }
 
@@ -159,78 +179,115 @@ header .layout  .tel_button{
   header{
   height: 200px;
 }
-  header .layout{
+  header .layout .header_container{
     max-width: 350px;
   flex-direction: column;
   gap: 15px;
 }
-header .layout .logo{
+header .layout .header_container .logo{
   width: 120px;
   height: 60px;
 }
-header .layout nav ul{
+header .layout .header_container nav ul{
   gap: 10px;
 }
-header .layout  .tel_button{
+header .layout .header_container  .tel_button{
   flex-direction: column;
   gap: 10px;
 }
 }
 
 
-main .first-view{}
-main .first-view .layout .baner{
-  width: 960px;
-  height: 300px;
+main .first-view{
+  background-color: #f1f3f8;
 }
-main .first-view  .layout .baner img{
+main .first-view .layout{}
+main .first-view .layout .container{
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  opacity: .3;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  /* justify-items: center; */
+  grid-template-areas: "text img";
+}
+main .first-view  .layout .container .baner{
+  width: 700px;
+  height: 520px;
+}
+main .first-view  .layout .container .baner img{
+  height: 520px;
+  grid-area: img;
+  object-fit: cover;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
   position: absolute;
 }
-main .first-view .layout .text{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 100px;
+main .first-view  .layout .container .baner p{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding: 10px;
+  width: 190px;
+  color: #FFF;
+  background-color: rgba(48, 30, 103, 0.7);
+  border-radius: 10px;
   position: relative;
-  bottom: 200px;
+  top: 84%;
+  left: 69%;
 }
-main .first-view .layout .text h2,
-main .first-view .layout .text h3,
-main .first-view .layout .text .btn a{
-  font-family: 'Courier New', Courier, monospace;
+main .first-view .layout .container .text{
+  display: flex;
+  flex-direction: column;
+  grid-area: text;
+  gap: 30px;
+  margin: 30px 0 0 0;
+}
+main .first-view .layout .container .text h2,
+main .first-view .layout .container .text p,
+main .first-view .layout .container .text h3,
+main .first-view .layout .container .text .btn a{
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
 }
-main .first-view .layout .text h2{
-  font-size: 36px;
+main .first-view .layout .container .text h2{
+  font-size: 38px;
   font-weight: 700;
+  width: 250px;
 }
-main .first-view .layout .text h3{
-   font-size: 26px;
+main .first-view .layout .container .text h3{
+   font-size: 20px;
    font-weight: 600;
    width: 800px;
-   text-align: center;
 }
-main .first-view .layout .text .btn{
+main .first-view .layout .container .text p{
+  font-size: 16px;
+  font-weight: 400;
+}
+main .first-view .layout .container .text .btn{
   display: flex;
-  gap: 100px;
+  gap: 40px;
+  margin: 80px 0 0 0;
 }
-main .first-view .layout .text .btn a{
+main .first-view .layout .container .text .btn a{
   display: inline-block;
-  font-size: 20px;
-  font-weight: 500;
-  width: 300px;
+  font-size: 16px;
+  font-weight: 400;
+  width: 250px;
   height: 50px;
-  background-color: #DAEAFF;
+  border: 2px solid #301e67;
   line-height: 50px;
   text-align: center;
   border-radius: 8px;
   transition: .3s;
 }
-main .first-view .layout .text .btn a:hover{
+main .first-view .layout .container .text .btn .base{
+  width: 250px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #f7c500;
+  border: 2px solid #f7c500;
+  line-height: 50px;
+  text-align: center;
+  color: #1f1f1f;
+}
+main .first-view .layout .container .text .btn a:hover{
   box-shadow: 0 10px 8px rgba(9, 24, 245, 0.2);
   transform: translateY(-8px);
 }
@@ -240,28 +297,28 @@ main .first-view .layout{
   max-width: 350px;
   width: 100%;
 }
-main .first-view .layout .baner{
+main .first-view .layout .container .baner{
   height: 200px;
 }
-main .first-view .layout .text{
+main .first-view .layout .container .text{
   gap: 50px;
   bottom: 100px;
 }
-main .first-view .layout .text h2{
-  font-size: 28px;
-  font-weight: 600;
+main .first-view .layout .container .text h2{
+  font-size: 32px;
+  font-weight: 700;
   text-align: center;
 }
-main .first-view .layout .text h3{
-   font-size: 20px;
+main .first-view .layout .container .text h3{
+   font-size: 18px;
    width: 100%;
 }
-main .first-view .layout .text .btn{
+main .first-view .layout .container .text .btn{
   flex-direction: column;
   gap: 20px;
 }
-main .first-view .layout .text .btn a{
-  font-size: 18px;
+main .first-view .layout .container .text .btn a{
+  font-size: 16px;
 }
 
 }
@@ -269,29 +326,30 @@ main .first-view .layout .text .btn a{
 
 
 main .catalog{
-  padding: 50px 0 50px 0;
+  padding: 30px 0 50px 0;
 }
 main .catalog .layout{
   width: 100%;
 }
+main .catalog .layout p,
 main .catalog .layout h2,
 main .catalog .layout h3,
 main .catalog .layout .catalog_box .catalog_card h4,
 main .catalog .layout .catalog_box .catalog_card p,
 main .catalog .layout .catalog_box .catalog_card span,
 main .catalog .layout .catalog_box .catalog_card a{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
   text-align: center;
 }
 main .catalog .layout h2{
-  font-size: 30px;
-  font-weight: 600;
-  margin: 0 0 30px 0;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px 0 30px 0;
 }
 main .catalog .layout h3{
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 50px 0;
 }
 main .catalog .layout .catalog_box{
@@ -302,12 +360,13 @@ main .catalog .layout .catalog_box{
 main .catalog .layout .catalog_box .catalog_card{
   max-width: 300px;
   width: 100%;
+  background-color: #f1f3f8;
   box-shadow: 0 0 10px rgba(9, 24, 245, 0.2);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   padding: 15px 10px 15px 10px;
   margin: 0 0 15px 0;
 }
@@ -315,6 +374,7 @@ main .catalog .layout .catalog_box .catalog_card h4{
   font-size: 18px;
   font-weight: 600;
 }
+main .catalog .layout p,
 main .catalog .layout .catalog_box .catalog_card p,
 main .catalog .layout .catalog_box .catalog_card a{
   font-size: 16px;
@@ -327,15 +387,16 @@ main .catalog .layout .catalog_box .catalog_card span{
 main .catalog .layout .catalog_box .catalog_card a{
   width: 150px;
   height: 30px;
-  background-color: #DAEAFF;
+  /* background-color: #DAEAFF; */
   line-height: 30px;
   text-align: center;
   border-radius: 8px;
+  border: 1px solid #301e67;
   margin: 10px 0 0 0;
   transition: .3s;
 }
 main .catalog .layout .catalog_box .catalog_card a:hover{
-  box-shadow: 0 10px 8px rgba(9, 24, 245, 0.2);
+  box-shadow: 0 5px 8px rgba(9, 24, 245, 0.2);
   transform: translateY(-8px);
 }
 
@@ -349,7 +410,7 @@ main .catalog .layout .catalog_box .catalog_card a:hover{
 
 @media (max-width: 767px){
   main .catalog .layout h2{
-  font-size: 28px;
+  font-size: 26px;
   margin: 0 0 20px 0;
 }
 main .catalog .layout h3{
@@ -364,30 +425,30 @@ main .catalog .layout .catalog_box{
 
 
 main .advantages{
+  background-color: #f1f3f8;
   padding: 40px 0 40px 0;
 }
 main .advantages h2,
 main .advantages h3,
 main .advantages p{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
   text-align: center;
 }
 main .advantages h2{
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
   margin: 0 0 20px 0;
 }
 main .advantages h3{
   font-size: 20px;
-  font-weight: 500;
+   font-weight: 600;
   margin: 0 0 40px 0;
 }
 main .advantages p{
-  font-size: 22px;
-  font-weight: 600;
-  text-decoration: underline;
-  margin: 0 0 40px 0;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 20px 0;
 }
 main .advantages .advantages_container{
   display: grid;
@@ -401,17 +462,21 @@ main .advantages .advantages_container .advantages_block{
   max-width: 280px;
   width: 100%;
   padding: 10px;
-  box-shadow: 0 0 10px rgba(9, 24, 245, 0.2);
-  border-radius: 0 10px 0 10px;
   margin: 0 0 10px 0;
 }
-main .advantages .advantages_container .advantages_block span{
-  font-weight: 600;
-  margin: 0 15px 0 0;
+main .advantages .advantages_container .advantages_block .block_img{
+  width: 70px;
+  height: 70px;
+}
+main .advantages .advantages_container .advantages_block .block_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 main .advantages .advantages_container .advantages_block h3{
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 20px 0;
+  /* text-align: start; */
 }
 
 main .advantages .advantages_container .advantages_block p{
@@ -420,6 +485,8 @@ main .advantages .advantages_container .advantages_block p{
   text-decoration: none;
   text-align: start;
   margin: 0 0 0 0;
+  /* text-align: start; */
+
 }
 
 @media (max-width: 1279px){
@@ -431,7 +498,7 @@ main .advantages .advantages_container .advantages_block p{
 
 @media (max-width: 767px){
     main .advantages h2{
-  font-size: 28px;
+  font-size: 26px;
   margin: 0 0 20px 0;
 }
 main .advantages h3{
@@ -451,13 +518,13 @@ main .how_it_works{
 main .how_it_works h2,
 main .how_it_works h3,
 main .how_it_works p{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
   text-align: center;
 }
 main .how_it_works h2{
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
   margin: 0 0 50px 0;
 }
 main .how_it_works .how_it_works_container{
@@ -490,19 +557,19 @@ main .how_it_works .how_it_works_container .how_it_works_block:last-child::befor
   content: "";
 }
 main .how_it_works .how_it_works_container .how_it_works_block h3{
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 20px;
+   font-weight: 600;
   margin: 0 0 20px 0;
   border-bottom: 2px solid #FFCC00;
 }
 main .how_it_works .how_it_works_container .how_it_works_block h3 span{
   padding: 0 10px 0 0;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
 }
 main .how_it_works .how_it_works_container .how_it_works_block p{
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   margin: 0 0 40px 0;
 }
 
@@ -522,7 +589,7 @@ main .how_it_works .how_it_works_container .how_it_works_block::before{
 
 @media (max-width: 767px){
     main .how_it_works h2{
-  font-size: 28px;
+  font-size: 26px;
   margin: 0 0 40px 0;
 }
 main .how_it_works h3{
@@ -567,20 +634,20 @@ main .about_the_company .about_container .about_img img{
 main .about_the_company h2,
 main .about_the_company h3,
 main .about_the_company p{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
 }
 main .about_the_company .about_container .about_title{
   grid-area: text;
 }
 main .about_the_company h2{
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
   margin: 0 0 50px 0;
 }
 main .about_the_company .about_container .about_title p{
-  font-size: 20px;
-  font-weight: 500; 
+  font-size: 16px;
+  font-weight: 400; 
   margin: 0 0 60px 0;
 }
 main .about_the_company .about_container .about_title .title_container{
@@ -595,8 +662,8 @@ main .about_the_company .about_container .about_title .title_container p{
 }
 main .about_the_company .about_container .about_title .title_container span{
   display: block;
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 @media (max-width: 767px){
@@ -613,13 +680,11 @@ main .about_the_company .about_container .about_title{
   width: 100%;
 }
 main .about_the_company h2{
-  font-size: 28px;
+  font-size: 26px;
   margin: 0 0 20px 0;
   text-align: center;
 }
-main .about_the_company .about_container .about_title p{
-  font-size: 18px;
-  font-weight: 500; 
+main .about_the_company .about_container .about_title p{ 
   margin: 0 0 40px 0;
   text-align: center;
 }
@@ -650,17 +715,17 @@ main .cost_calc .calc_container .calc_form form input,
 main .cost_calc .calc_container .calc_form select:optional,
 main .cost_calc .calc_container .calc_form form textarea,
 main .cost_calc .calc_container .calc_form form button{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
 }
 main .cost_calc .calc_container .calc_text h2{
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
   text-align: center;
 }
 main .cost_calc .calc_container .calc_text p{
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   text-align: center;
 }
 main .cost_calc .calc_container .calc_form{
@@ -673,8 +738,8 @@ main .cost_calc .calc_container .calc_form form{
   gap: 10px;
 }
 main .cost_calc .calc_container .calc_form form label{
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
 }
 main .cost_calc .calc_container .calc_form input,
 main .cost_calc .calc_container .calc_form select,
@@ -686,9 +751,9 @@ main .cost_calc .calc_container .calc_form textarea{
   border-radius: 8px;
 }
 main .cost_calc .calc_container .calc_form select{
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 500;
-  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 main .cost_calc .calc_container .calc_form textarea{
   padding: 5px;
@@ -698,8 +763,8 @@ main .cost_calc .calc_container .calc_form textarea:placeholder-shown{
   font-weight: 400;
 }
 main .cost_calc .calc_container .calc_form button{
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   border-radius: 10px;
   width: 300px;
   height: 35px;
@@ -722,12 +787,12 @@ main .cost_calc .calc_container{
   justify-items: center;
 }
   main .cost_calc .calc_container .calc_text h2{
-  font-size: 28px;
+  font-size: 26px;
   text-align: center;
 }
 main .cost_calc .calc_container .calc_text p{
-  font-size: 18px;
-  font-weight: 500; 
+  font-size: 16px;
+  font-weight: 400; 
   margin: 0 0 20px 0;
 }
 main .cost_calc .calc_container .calc_form form{
@@ -742,7 +807,6 @@ main .cost_calc .calc_container .calc_form form label{
 main .cost_calc .calc_container .calc_form input,
 main .cost_calc .calc_container .calc_form select,
 main .cost_calc .calc_container .calc_form textarea{
-  font-size: 14px;
   margin: 0 0 20px 0;
 }
 }
@@ -767,18 +831,18 @@ main .contacts .contacts_container .contacts_title p,
 main .contacts .contacts_container .contacts_title a,
 main .contacts .contacts_container .contacts_title span,
 main .contacts .contacts_container .contacts_title time{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
 }
 main .contacts .contacts_container .contacts_title h2{
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
   text-align: center;
   margin: 0 0 60px 0;
 }
 main .contacts .contacts_container .contacts_title p{
-  font-size: 18px;
-  font-weight: 500; 
+  font-size: 16px;
+  font-weight: 400; 
   text-decoration: underline #FFCC00;
   margin: 0 0 10px 0;
 }
@@ -788,8 +852,8 @@ main .contacts .contacts_container .contacts_title time{
   display: inline-block;
     margin: 0 0 20px 0;
     padding: 0 0 0 15px;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 16px;
+  font-weight: 400;
 }
 main .contacts .contacts_container .contacts_title a:hover{
   text-decoration: underline;
@@ -830,12 +894,12 @@ main .contacts .contacts_container{
   justify-items: center;
 }
 main .contacts .contacts_container .contacts_title h2{
-  font-size: 28px;
+  font-size: 26px;
   text-align: center;
 }
 main .contacts .contacts_container .contacts_title p{
-  font-size: 18px;
-  font-weight: 500; 
+  font-size: 16px;
+  font-weight: 400; 
   margin: 0 0 20px 0;
 }
 main .contacts .contacts_container .contacts_title a,
@@ -886,10 +950,10 @@ footer .layout .footer_container .footer_title .footer_logo img{
   height: 100%;
 }
 footer .layout .footer_container .footer_title p{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   text-align: center;
   max-width: 400px;
   width: 100%;
@@ -903,10 +967,10 @@ footer .layout .footer_container .footer_nav ul{
 }
 footer .layout .footer_container .footer_nav ul li{}
 footer .layout .footer_container .footer_nav ul li a{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
 }
 footer .layout .footer_container .footer_nav ul li a:hover{
   text-decoration: underline;
@@ -923,10 +987,10 @@ footer .layout .footer_container .footer_contacts p,
 footer .layout .footer_container .footer_contacts a,
 footer .layout .footer_container .footer_contacts span,
 footer .layout .footer_container .footer_contacts time{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   color: #301e67;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
 }
 footer .layout .footer_container .footer_contacts a,
 footer .layout .footer_container .footer_contacts span,
@@ -939,8 +1003,8 @@ footer .layout .footer_container .footer_contacts a:hover{
 }
 footer .layout small{
   display: block;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   font-weight: 400;
   color: #301e67;
   text-align: center;
