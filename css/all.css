@@ -765,6 +765,7 @@ main .contacts .contacts_container .contacts_title{
 main .contacts .contacts_container .contacts_title h2,
 main .contacts .contacts_container .contacts_title p,
 main .contacts .contacts_container .contacts_title a,
+main .contacts .contacts_container .contacts_title span,
 main .contacts .contacts_container .contacts_title time{
   font-family: 'Courier New', Courier, monospace;
   color: #301e67;
@@ -776,17 +777,18 @@ main .contacts .contacts_container .contacts_title h2{
   margin: 0 0 60px 0;
 }
 main .contacts .contacts_container .contacts_title p{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500; 
   text-decoration: underline #FFCC00;
   margin: 0 0 10px 0;
 }
 main .contacts .contacts_container .contacts_title a,
+main .contacts .contacts_container .contacts_title span,
 main .contacts .contacts_container .contacts_title time{
   display: inline-block;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 0 0 15px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
 }
 main .contacts .contacts_container .contacts_title a:hover{
@@ -821,7 +823,7 @@ main .contacts .contacts_container .contacts_img .img_block img.img_3{
 
 @media (max-width: 767px){
   main .contacts .layout{
-  width: 96%;
+  width: 94%;
 }
 main .contacts .contacts_container{
   grid-template-columns: 1fr;  
@@ -857,6 +859,93 @@ main .contacts .contacts_container .contacts_img .img_block img.img_2,
 main .contacts .contacts_container .contacts_img .img_block img.img_3{
   border-radius: 30px;
 }
+}
+
+
+footer{
+  margin: 50px 0 50px 0;
+}
+footer .layout .footer_container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-items: center;
+  margin: 0 0 50px 0;
+}
+footer .layout .footer_container .footer_title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+footer .layout .footer_container .footer_title .footer_logo{
+  width: 140px;
+  height: 70px;
+}
+footer .layout .footer_container .footer_title .footer_logo img{
+  width: 100%;
+  height: 100%;
+}
+footer .layout .footer_container .footer_title p{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+footer .layout .footer_container .footer_nav{}
+footer .layout .footer_container .footer_nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+footer .layout .footer_container .footer_nav ul li{}
+footer .layout .footer_container .footer_nav ul li a{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+  font-size: 18px;
+  font-weight: 500;
+}
+footer .layout .footer_container .footer_nav ul li a:hover{
+  text-decoration: underline;
+  color: #333399;
+}
+footer .layout .footer_container .footer_contacts{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+  max-width: 300px;
+  width: 100%;
+}
+footer .layout .footer_container .footer_contacts p,
+footer .layout .footer_container .footer_contacts a,
+footer .layout .footer_container .footer_contacts span,
+footer .layout .footer_container .footer_contacts time{
+  font-family: 'Courier New', Courier, monospace;
+  color: #301e67;
+  font-size: 18px;
+  font-weight: 500;
+}
+footer .layout .footer_container .footer_contacts a,
+footer .layout .footer_container .footer_contacts span,
+footer .layout .footer_container .footer_contacts time{
+  padding: 0 0 0 10px;
+}
+footer .layout .footer_container .footer_contacts a:hover{
+  text-decoration: underline;
+  color: #333399;
+}
+footer .layout small{
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #301e67;
+  text-align: center;
+  border-top: 1px solid #301e67;
+  padding: 20px 0 0 0;
 }
 
 
