@@ -159,6 +159,8 @@ header .layout .header_container .tel_button .nav_btn{
 header .layout .header_container  .tel_button a{
   font-weight: 600;
 }
+
+
 header .layout .header_container nav ul li a:hover,
 header .layout .header_container  .tel_button a:hover{
   text-decoration: underline;
@@ -520,12 +522,15 @@ main .how_it_works h3,
 main .how_it_works p{
   font-family: "Montserrat", sans-serif;
   color: #301e67;
+}
+main .how_it_works h2,
+main .how_it_works p{
   text-align: center;
 }
 main .how_it_works h2{
   font-size: 32px;
   font-weight: 700;
-  margin: 0 0 50px 0;
+  margin: 20px 0 50px 0;
 }
 main .how_it_works .how_it_works_container{
   display: grid;
@@ -535,10 +540,7 @@ main .how_it_works .how_it_works_container{
 main .how_it_works .how_it_works_container .how_it_works_block{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  box-shadow: 0 0 10px rgba(9, 24, 245, 0.2);
-  border-radius: 30px;
-  padding: 20px 20px 0 20px;
+  align-items: start;
   margin: 0 0 15px 0;
   max-width: 200px;
   width: 100%;
@@ -546,12 +548,14 @@ main .how_it_works .how_it_works_container .how_it_works_block{
   position: relative;
 }
 main .how_it_works .how_it_works_container .how_it_works_block::before{
-  content: "\27AF";
-  font-size: 30px;
+  display: block;
+  content: "\27F6";
+  font-size: 50px;
   position: absolute;
-  left: 130%;
-  top: 40%;
-  color: #301e67;
+  left: 60%;
+  top: -3%;
+  width: 600px;
+  color: rgba(104, 104, 104, 0.3);;
 }
 main .how_it_works .how_it_works_container .how_it_works_block:last-child::before{
   content: "";
@@ -560,17 +564,22 @@ main .how_it_works .how_it_works_container .how_it_works_block h3{
   font-size: 20px;
    font-weight: 600;
   margin: 0 0 20px 0;
-  border-bottom: 2px solid #FFCC00;
 }
-main .how_it_works .how_it_works_container .how_it_works_block h3 span{
-  padding: 0 10px 0 0;
-  text-decoration: none;
+main .how_it_works .how_it_works_container .how_it_works_block span{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   font-size: 20px;
+  border-radius: 48px;
+  background-color: #301e67;
+  color: #fff;
+  padding: 10px;
+  margin: 0 0 15px 0;
 }
 main .how_it_works .how_it_works_container .how_it_works_block p{
   font-size: 16px;
   font-weight: 400;
   margin: 0 0 40px 0;
+  text-align: start;
 }
 
 @media (max-width: 1279px){
@@ -612,18 +621,18 @@ main .how_it_works .how_it_works_container .how_it_works_block::before{
 
 
 main .about_the_company{
-  padding: 40px 0 40px 0;
+  padding: 30px 0 30px 0;
+  background-color: #f1f3f8;
 }
 main .about_the_company .about_container{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(3,1fr);
   justify-items: center;
-  grid-template-areas: "text image";
+  gap: 20px;
 }
 main .about_the_company .about_container .about_img{
   width: 400px;
-  height: 500px;
-  grid-area: image;
+  height: 400px;
 }
 main .about_the_company .about_container .about_img img{
   border-radius: 10px;
@@ -633,38 +642,62 @@ main .about_the_company .about_container .about_img img{
 }
 main .about_the_company h2,
 main .about_the_company h3,
-main .about_the_company p{
+main .about_the_company p,
+main .about_the_company a,
+main .about_the_company span{
   font-family: "Montserrat", sans-serif;
   color: #301e67;
 }
-main .about_the_company .about_container .about_title{
-  grid-area: text;
-}
-main .about_the_company h2{
-  font-size: 32px;
-  font-weight: 700;
-  margin: 0 0 50px 0;
-}
-main .about_the_company .about_container .about_title p{
-  font-size: 16px;
-  font-weight: 400; 
-  margin: 0 0 60px 0;
-}
-main .about_the_company .about_container .about_title .title_container{
-  display: grid;
-  grid-template-columns: repeat(2,2fr);
-  justify-items: center;
-  gap: 30px;
-}
-main .about_the_company .about_container .about_title .title_container p{ 
-  font-size: 16px;
-  text-align: center;
-}
-main .about_the_company .about_container .about_title .title_container span{
+main .about_the_company p,
+main .about_the_company a,
+main .about_the_company span{
   display: block;
   font-size: 16px;
   font-weight: 400;
 }
+main .about_the_company .about_container .about_title{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .about_the_company .about_container .about_title h2{
+  font-size: 32px;
+  font-weight: 700;
+}
+main .about_the_company .about_container .about_title a{
+  font-size: 16px;
+  font-weight: 500;
+  width: 200px;
+  height: 40px;
+  color: #1f1f1f;
+  line-height: 40px;
+  text-align: center;
+  background-color: #f7c500;
+  border-radius: 10px;
+  transition: .3s;
+}
+main .about_the_company .about_container .about_title a:hover{
+  box-shadow: 0 5px 8px rgba(9, 24, 245, 0.2);
+  transform: translateY(-8px);
+}
+main .about_the_company .about_container .title_block{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(48, 30, 103, 0.4);
+  border-radius: 10px;
+  padding: 15px;
+  height: 300px;
+  margin: 10px 0 0 0;
+}
+main .about_the_company .about_container .title_block span{
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+}
+main .about_the_company .about_container .title_block p{
+  margin: 0 0 20px 0;
+}
+
 
 @media (max-width: 767px){
   main .about_the_company .about_container{
