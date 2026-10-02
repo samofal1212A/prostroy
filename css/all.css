@@ -402,6 +402,15 @@ main .catalog .layout .catalog_box .catalog_card{
   padding: 15px 10px 15px 10px;
   margin: 0 0 15px 0;
 }
+main .catalog .layout .catalog_box .catalog_card .catalog_img{
+  width: 100px;
+  height: 100px;
+}
+main .catalog .layout .catalog_box .catalog_card .catalog_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 main .catalog .layout .catalog_box .catalog_card h4{
   font-size: 18px;
   font-weight: 600;
