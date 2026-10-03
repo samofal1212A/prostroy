@@ -174,17 +174,17 @@ header .layout .header_container  .tel_button{
 
 @media (max-width: 1279px) {
   header .layout{
-    width: 94%;
+    width: 96%;
   }
   header .layout .header_container .logo{
   width: 120px;
   height: 60px;
 }
   header .layout .header_container nav ul{
-  gap: 20px;
+  gap: 15px;
 }
 header .layout .header_container  .tel_button{
-  gap: 25px;
+  gap: 15px;
 }
 }
 
@@ -450,9 +450,12 @@ main .catalog .layout .catalog_box .catalog_card a:hover{
 }
 
 @media (max-width: 767px){
+  main .catalog .layout{
+    width: 96%;
+  }
   main .catalog .layout h2{
   font-size: 26px;
-  margin: 0 0 20px 0;
+  margin: 15px 0 20px 0;
 }
 main .catalog .layout h3{
   font-size: 18px;
@@ -554,13 +557,14 @@ main .advantages .advantages_container{
   gap: 15px;
 }
 main .advantages .advantages_container .advantages_block{
-  display: flex;
   flex-direction: row;
-  align-content: center;
   max-width: 280px;
   padding: 0;
   margin: 0 0 0 0;
   gap: 10px;
+}
+main .advantages .advantages_container .advantages_block h3{
+  margin: 10px 0 0 10px;
 }
 main .advantages .advantages_container .advantages_block p{
   display: none;
@@ -664,6 +668,9 @@ main .how_it_works .how_it_works_container .how_it_works_block::before{
 }
 
 @media (max-width: 767px){
+  main .how_it_works span{
+  margin: 0 0 15px 0;
+}
     main .how_it_works h2{
   font-size: 26px;
   margin: 0 0 40px 0;
@@ -781,15 +788,15 @@ main .about_the_company .about_container .about_img{
 
 
 @media (max-width: 767px){
-  main .about_the_company .layout{
-    width: 95%;
-  }
   main .about_the_company .about_container{
   grid-template-columns: repeat(2,1fr);
 }
 main .about_the_company .about_container .about_img{
   width: 100%;
   height: 200px;
+}
+main .about_the_company .about_container .about_title{
+  margin: 0 15px 0 0;
 }
 main .about_the_company .about_container .about_title h2{
   font-size: 24px;
@@ -888,7 +895,6 @@ main .cost_calc .calc_container .calc_form select{
 }
 main .cost_calc .calc_container .calc_form textarea{
   padding: 5px;
-  width: 100%;
   height: 80px;
 }
 main .cost_calc .calc_container .calc_form textarea:placeholder-shown{
@@ -927,18 +933,31 @@ main .cost_calc .calc_container .calc_img img{
 
 @media (max-width: 1279px){
   main .cost_calc .layout{
-    width: 94%;
+    width: 100%;
+  }
+  main .cost_calc .calc_container{
+    margin: 0 0 0 10px;
   }
   main .cost_calc .calc_container .calc_form .form_box .form_row{
   gap: 10px;
   justify-items: center;
+  grid-template-columns: repeat(2,1fr);
+}
+main .cost_calc .calc_container .calc_form .form_box .form_row:nth-child(2){
+  grid-template-columns: 1fr 1fr;
 }
 }
 
 
 @media (max-width: 767px){
+  main .cost_calc .layout{
+    width: 96%;
+  }
   main .cost_calc .calc_container{
   grid-template-columns: 1fr;
+}
+main .cost_calc .calc_container .calc_form span{
+  text-align: center;
 }
 main .cost_calc .calc_container .calc_form h2{
   font-size: 26px;
@@ -961,7 +980,7 @@ main .cost_calc .calc_container .calc_img{
 }
 main .cost_calc .calc_container .calc_form textarea{
   padding: 5px;
-  width: 300px;
+  width: 100%;
   height: 80px;
 }
 }
@@ -1024,6 +1043,15 @@ main .contacts .contacts_container .img_block img{
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
+}
+
+@media (max-width: 1279px){
+  main .contacts .layout{
+    width: 100%;
+  }
+  main .contacts .contacts_container .img_block{
+  width: 100%;
+}
 }
 
 @media (max-width: 767px){
@@ -1136,7 +1164,16 @@ footer .layout small{
   padding: 20px 0 0 0;
 }
 
+@media (max-width: 1279px){
+  footer .layout{
+    width: 96%;
+  }
+}
+
 @media (max-width: 767px){
+  footer .layout{
+    width: 96%;
+  }
   footer .layout .footer_container{
   grid-template-columns: 1fr;
   gap: 30px;
