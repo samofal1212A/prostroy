@@ -176,6 +176,9 @@ header .layout .header_container  .tel_button{
   header .layout{
     width: 96%;
   }
+  header .layout .header_container{
+    justify-content: space-between;
+  }
   header .layout .header_container .logo{
   width: 120px;
   height: 60px;
@@ -184,7 +187,11 @@ header .layout .header_container  .tel_button{
   gap: 15px;
 }
 header .layout .header_container  .tel_button{
+  flex-direction: column;
   gap: 15px;
+}
+header .layout .header_container .tel_button .nav_btn{
+  width: 220px;
 }
 }
 
@@ -232,9 +239,9 @@ main .first-view  .layout .container .baner span{
   color: #FFF;
   background-color: rgba(48, 30, 103, 0.7);
   border-radius: 10px;
-  position: relative;
+  position: sticky;
   top: 84%;
-  left: 69%;
+  left: 80%;
 }
 main .first-view .layout .container .text{
   display: flex;
@@ -299,13 +306,17 @@ main .first-view .layout .container .text .btn a:hover{
 }
 
 @media (max-width: 1279px) {
-  main .first-view .layout .container .baner{
+  main .first-view .layout{
+    width: 96%;
+  }
+  main .first-view .layout .baner{
     width: 100%;
     height: 450px;
   }
    main .first-view .layout .container .baner img{
     width: 100%;
   }
+
   main .first-view .layout .container .text{
     margin: 20px 0 0 20px;
   }
@@ -316,6 +327,14 @@ main .first-view .layout .container .text .btn a:hover{
   margin: 30px 0 0 0;
 }
 }
+
+/* @media (min-width: 768px) and (max-width: 1023px) {
+   main .first-view  .layout .container .baner span{
+    top: 85%;
+    left: 38%;
+  }
+} */
+
 
 @media (max-width: 767px){
   main .first-view .layout .container{
@@ -388,6 +407,8 @@ main .catalog .layout .catalog_box{
   display: grid;
   grid-template-columns: repeat(4,1fr);
   justify-items: center;
+  max-width: 1600px;
+  width: 100%;
 }
 main .catalog .layout .catalog_box .catalog_card{
   max-width: 300px;
@@ -501,15 +522,17 @@ main .advantages p{
 }
 main .advantages .advantages_container{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  max-width: 1165px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 15px;
 }
 main .advantages .advantages_container .advantages_block{
   display: flex;
   flex-direction: column;
   align-items: start;
-  max-width: 280px;
-  width: 100%;
+  width: 250px;
   padding: 10px;
   margin: 0 0 10px 0;
 }
@@ -539,11 +562,14 @@ main .advantages .advantages_container .advantages_block p{
 @media (max-width: 1279px){
   main .advantages .advantages_container{
   grid-template-columns: repeat(2,1fr);
-  gap: 15px;
+  justify-items: center;
 }
 }
 
 @media (max-width: 767px){
+  main .advantages .layout{
+    width: 96%;
+  }
     main .advantages h2{
   font-size: 26px;
   margin: 0 0 20px 0;
@@ -554,7 +580,7 @@ main .advantages h3{
 }
 main .advantages .advantages_container{
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 10px;
 }
 main .advantages .advantages_container .advantages_block{
   flex-direction: row;
@@ -603,16 +629,18 @@ main .how_it_works h2{
 }
 main .how_it_works .how_it_works_container{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  max-width: 1165px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 15px
 }
 main .how_it_works .how_it_works_container .how_it_works_block{
   display: flex;
   flex-direction: column;
   align-items: start;
   margin: 0 0 15px 0;
-  max-width: 200px;
-  width: 100%;
+  width: 200px;
   position: relative;
 }
 main .how_it_works .how_it_works_container .how_it_works_block::before{
@@ -656,7 +684,7 @@ main .how_it_works .how_it_works_container .how_it_works_block p{
   }
   main .how_it_works .how_it_works_container{
   grid-template-columns: repeat(2,1fr);
-  gap: 25px;
+  justify-items: center;
   margin: 0 0 15px 0;
 }
 main .how_it_works .how_it_works_container .how_it_works_block{
@@ -709,11 +737,13 @@ main .about_the_company .about_container{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   justify-items: center;
+  grid-template-areas: "image text title";
   gap: 20px;
 }
 main .about_the_company .about_container .about_img{
   width: 400px;
   height: 400px;
+  grid-area: image;
 }
 main .about_the_company .about_container .about_img img{
   border-radius: 10px;
@@ -740,6 +770,7 @@ main .about_the_company .about_container .about_title{
   display: flex;
   flex-direction: column;
   gap: 30px;
+  grid-area: text;
 }
 main .about_the_company .about_container .about_title h2{
   font-size: 32px;
@@ -769,6 +800,7 @@ main .about_the_company .about_container .title_block{
   padding: 15px;
   height: 300px;
   margin: 10px 0 0 0;
+  grid-area: title;
 }
 main .about_the_company .about_container .title_block span{
   font-size: 30px;
@@ -780,30 +812,39 @@ main .about_the_company .about_container .title_block p{
 }
 
 @media (max-width: 1279px){
+  main .about_the_company .layout{
+    width: 96%;
+  }
+  main .about_the_company .about_container{
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  gap: 0;
+  row-gap: 20px; 
+  grid-template-areas:
+    "image title"
+    "text text";
+}
 main .about_the_company .about_container .about_img{
-  width: 300px;
+  width: 100%;
   height: 300px;
 }
+
 }
 
 
 @media (max-width: 767px){
   main .about_the_company .about_container{
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 1fr;
 }
-main .about_the_company .about_container .about_img{
-  width: 100%;
-  height: 200px;
-}
-main .about_the_company .about_container .about_title{
-  margin: 0 15px 0 0;
-}
+
 main .about_the_company .about_container .about_title h2{
   font-size: 24px;
   font-weight: 400;
+  text-align: center;
 }
 main .about_the_company .about_container .about_title a{
   width: 170px;
+  margin: 0 auto;
 }
 main .about_the_company .about_container .title_block{
   display: none;
@@ -822,8 +863,9 @@ main .cost_calc{
 }
 main .cost_calc .calc_container{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  justify-items: center;
+  grid-template-columns: 1fr 450px;
+  justify-content: center;
+  gap: 20px;
 }
 main .cost_calc .calc_container .calc_form span,
 main .cost_calc .calc_container .calc_form h2,
@@ -921,7 +963,7 @@ main .cost_calc .calc_container .calc_form button:hover{
   transform: translateY(-8px);
 }
 main .cost_calc .calc_container .calc_img{
-  width: 300px;
+  width: 450px;
   height: 400px;
 }
 main .cost_calc .calc_container .calc_img img{
@@ -933,18 +975,14 @@ main .cost_calc .calc_container .calc_img img{
 
 @media (max-width: 1279px){
   main .cost_calc .layout{
-    width: 100%;
+    width: 96%;
   }
   main .cost_calc .calc_container{
-    margin: 0 0 0 10px;
-  }
-  main .cost_calc .calc_container .calc_form .form_box .form_row{
-  gap: 10px;
-  justify-items: center;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 1fr;
 }
-main .cost_calc .calc_container .calc_form .form_box .form_row:nth-child(2){
-  grid-template-columns: 1fr 1fr;
+  main .cost_calc .calc_container .calc_img,
+  main .cost_calc .calc_container .calc_img img{
+  display: none;
 }
 }
 
